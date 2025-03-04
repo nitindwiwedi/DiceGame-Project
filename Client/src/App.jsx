@@ -13,7 +13,7 @@ export default function DiceGame() {
     }
 
     const clientSeed = Math.random().toString(36).substring(2, 10);
-    const response = await fetch("http://localhost:5000/roll-dice", {
+    const response = await fetch("https://dicegame-project.onrender.com", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ bet, clientSeed }),
